@@ -144,7 +144,7 @@ section{width: 100%;
 
 #side_con li:nth-child(1){margin-left: 400px;
     background-color: aqua;}
-/* #side_con li:nth-child(2){margin-left: 400px;} */
+#side_con li:nth-child(2){margin-left: 400px;}
 #side_con li:nth-child(3){margin-left: 400px;
     background-color: blue;}
 #side_con li:nth-child(4){margin-left: 400px;
@@ -186,6 +186,8 @@ section{width: 100%;
 
 #start{margin-top: 30px;
     text-align: left;}
+
+
 
 .place{width: 100%;
     margin-top: 20px;}

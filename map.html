@@ -15,7 +15,7 @@
         $(function(){
 
             var $side_menu =$("#side_btn li");
-            var $con = $("#side_con li");
+            var $con = $("#side_con > ul > li");
 
             $side_menu.eq(0).click(function(){
 			$("#side_con").find($con.eq(0)).stop().animate({"margin-left":"0"},500,"linear")
@@ -49,6 +49,9 @@
             $("#side_con").find($con.eq(2)).stop().animate({"margin-left":"400"},1,"linear");
 		});
         });
+    
+      
+    
     </script>
 
 
@@ -111,15 +114,20 @@
 
                         <div id="start">
                             <div class="subtitle"><h3>경유지</h3></div>
+                   
+                            
                             <input type="search" class="place">
+
                             <input type="search" class="place">
                         </div>
                         <div id="add"><span>+</span></div>
 
                         <div id="info">
-                        <div class="subtitle2"><h4>최소 시간</h4></div>
+                        <div class="subtitle2"><h4>최소 시간</h4>
+                        </div>
 
-                        <div class="subtitle2"><h4>최소 거리</h4></div>
+                        <div class="subtitle2"><h4>최소 거리</h4>
+                        </div>
                         </div>
                     </div>    
                 </li>
