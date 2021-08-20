@@ -8,51 +8,9 @@
     <title>Lead Me</title>
 
     <script src="jquery-3.6.0.js" type="text/javascript" text="javascript"></script>
-    <script src="jquery-ui.min.js" type="text/javascript" text="javascript"></script>
+    <script src="map.js" type="text/javascript" text="javascript"></script>
     
-    <script>
-        
-        $(function(){
-
-            var $side_menu =$("#side_btn li");
-            var $con = $("#side_con > ul > li");
-
-            $side_menu.eq(0).click(function(){
-			$("#side_con").find($con.eq(0)).stop().animate({"margin-left":"0"},500,"linear")
-            $("#side_con").find($con.eq(1)).stop().animate({"margin-left":"400"},1,"linear")
-            $("#side_con").find($con.eq(2)).stop().animate({"margin-left":"400"},1,"linear")
-            $("#side_con").find($con.eq(3)).stop().animate({"margin-left":"400"},1,"linear");
-		});
-
-		// $content2.eq(0).mouseleave(function(){
-		// 	$("#side_con").find($con.eq(0)).stop().animate({"margin-left":"400"},500,"linear");
-		// });
-
-        $side_menu.eq(1).click(function(){
-			$("#side_con").find($con.eq(1)).stop().animate({"margin-left":"0"},500,"linear")
-            $("#side_con").find($con.eq(0)).stop().animate({"margin-left":"400"},1,"linear")
-            $("#side_con").find($con.eq(2)).stop().animate({"margin-left":"400"},1,"linear")
-            $("#side_con").find($con.eq(3)).stop().animate({"margin-left":"400"},1,"linear");
-		});
-
-        $side_menu.eq(2).click(function(){
-			$("#side_con").find($con.eq(2)).stop().animate({"margin-left":"0"},500,"linear")
-            $("#side_con").find($con.eq(0)).stop().animate({"margin-left":"400"},1,"linear")
-            $("#side_con").find($con.eq(1)).stop().animate({"margin-left":"400"},1,"linear")
-            $("#side_con").find($con.eq(3)).stop().animate({"margin-left":"400"},1,"linear");
-		});
-
-        $side_menu.eq(3).click(function(){
-			$("#side_con").find($con.eq(3)).stop().animate({"margin-left":"0"},500,"linear")
-            $("#side_con").find($con.eq(0)).stop().animate({"margin-left":"400"},1,"linear")
-            $("#side_con").find($con.eq(1)).stop().animate({"margin-left":"400"},1,"linear")
-            $("#side_con").find($con.eq(2)).stop().animate({"margin-left":"400"},1,"linear");
-		});
-        });
-    
-      
-    
-    </script>
+   
 
 
 </head>
@@ -73,6 +31,7 @@
                 </ul>
             </nav>
         </div>
+        
         <!-- header -->
 
 
@@ -100,7 +59,6 @@
                 <li>
                 hello
                 </li>
-
                 <li id="map">
                     <div class="side_wrap">
                         <div class="title"><h2>경로 설정</h2></div>
@@ -112,31 +70,57 @@
                             <input type="search" class="place">
                         </div>
 
-                        <div id="start">
+                        <div id="place">
                             <div class="subtitle"><h3>경유지</h3></div>
                    
                             
-                            <input type="search" class="place">
+                            <input type="search" class="place2">
 
+                        </div>
+                        
+                        <div id="add" onclick="add_textbox()"><span>+</span></div>
+
+                        <div id="finish">
+                            <div class="subtitle"><h3>목적지</h3></div>
                             <input type="search" class="place">
                         </div>
-                        <div id="add"><span>+</span></div>
+
 
                         <div id="info">
-                        <div class="subtitle2"><h4>최소 시간</h4>
-                        </div>
+                            <div class="subtitle2"><h4>시간</h4>
+                                <h4>거리</h4>
+                            </div>
 
-                        <div class="subtitle2"><h4>최소 거리</h4>
+                            <span id="line"></span>
+
+                            <div id="imp_f">
+                                <h5>최적화</h5>
+                                <div id="imp_menu">
+                                    <div>최소 거리</div>
+                                    <div>최소 시간</div>
+                                </div>
+                            </div>
+
+                            
+                            
                         </div>
-                        </div>
-                    </div>    
+                        <div id="under_bar">
+                           <div><a href="#"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaWQ9IlNvbGlkIj48cGF0aCBkPSJtMjM5LjAyOSAzODQuOTdhMjQgMjQgMCAwIDAgMzMuOTQyIDBsOTAuNTA5LTkwLjUwOWEyNCAyNCAwIDAgMCAwLTMzLjk0MSAyNCAyNCAwIDAgMCAtMzMuOTQxIDBsLTQ5LjUzOSA0OS41Mzl2LTI2Mi4wNTlhMjQgMjQgMCAwIDAgLTQ4IDB2MjYyLjA1OWwtNDkuNTM5LTQ5LjUzOWEyNCAyNCAwIDAgMCAtMzMuOTQxIDAgMjQgMjQgMCAwIDAgMCAzMy45NDF6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+PHBhdGggZD0ibTQ2NCAyMzJhMjQgMjQgMCAwIDAgLTI0IDI0djE4NGgtMzY4di0xODRhMjQgMjQgMCAwIDAgLTQ4IDB2MTkyYTQwIDQwIDAgMCAwIDQwIDQwaDM4NGE0MCA0MCAwIDAgMCA0MC00MHYtMTkyYTI0IDI0IDAgMCAwIC0yNC0yNHoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg==" /></a></div>
+                           <div><a href="#"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaWQ9IlNvbGlkIj48cGF0aCBkPSJtMTgyLjQ2MSAxNTUuNDggNDkuNTM5LTQ5LjUzOXYyNjIuMDU5YTI0IDI0IDAgMCAwIDQ4IDB2LTI2Mi4wNTlsNDkuNTM5IDQ5LjUzOWEyNCAyNCAwIDEgMCAzMy45NDEtMzMuOTQxbC05MC41MDktOTAuNTFhMjQgMjQgMCAwIDAgLTMzLjk0MiAwbC05MC41MDkgOTAuNTFhMjQgMjQgMCAxIDAgMzMuOTQxIDMzLjk0MXoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48cGF0aCBkPSJtNDY0IDIzMmEyNCAyNCAwIDAgMCAtMjQgMjR2MTg0aC0zNjh2LTE4NGEyNCAyNCAwIDAgMCAtNDggMHYxOTJhNDAgNDAgMCAwIDAgNDAgNDBoMzg0YTQwIDQwIDAgMCAwIDQwLTQwdi0xOTJhMjQgMjQgMCAwIDAgLTI0LTI0eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+" /></a></div>
+                           <div><a href="#"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTQyNCA2NGgtODh2LTE2YzAtMjYuNDY3LTIxLjUzMy00OC00OC00OGgtNjRjLTI2LjQ2NyAwLTQ4IDIxLjUzMy00OCA0OHYxNmgtODhjLTIyLjA1NiAwLTQwIDE3Ljk0NC00MCA0MHY1NmMwIDguODM2IDcuMTY0IDE2IDE2IDE2aDguNzQ0bDEzLjgyMyAyOTAuMjgzYzEuMjIxIDI1LjYzNiAyMi4yODEgNDUuNzE3IDQ3Ljk0NSA0NS43MTdoMjQyLjk3NmMyNS42NjUgMCA0Ni43MjUtMjAuMDgxIDQ3Ljk0NS00NS43MTdsMTMuODIzLTI5MC4yODNoOC43NDRjOC44MzYgMCAxNi03LjE2NCAxNi0xNnYtNTZjMC0yMi4wNTYtMTcuOTQ0LTQwLTQwLTQwem0tMjE2LTE2YzAtOC44MjIgNy4xNzgtMTYgMTYtMTZoNjRjOC44MjIgMCAxNiA3LjE3OCAxNiAxNnYxNmgtOTZ6bS0xMjggNTZjMC00LjQxMSAzLjU4OS04IDgtOGgzMzZjNC40MTEgMCA4IDMuNTg5IDggOHY0MGMtNC45MzEgMC0zMzEuNTY3IDAtMzUyIDB6bTMxMy40NjkgMzYwLjc2MWMtLjQwNyA4LjU0NS03LjQyNyAxNS4yMzktMTUuOTgxIDE1LjIzOWgtMjQyLjk3NmMtOC41NTUgMC0xNS41NzUtNi42OTQtMTUuOTgxLTE1LjIzOWwtMTMuNzUxLTI4OC43NjFoMzAyLjQ0eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiI+PC9wYXRoPjxwYXRoIGQ9Im0yNTYgNDQ4YzguODM2IDAgMTYtNy4xNjQgMTYtMTZ2LTIwOGMwLTguODM2LTcuMTY0LTE2LTE2LTE2cy0xNiA3LjE2NC0xNiAxNnYyMDhjMCA4LjgzNiA3LjE2MyAxNiAxNiAxNnoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiPjwvcGF0aD48cGF0aCBkPSJtMzM2IDQ0OGM4LjgzNiAwIDE2LTcuMTY0IDE2LTE2di0yMDhjMC04LjgzNi03LjE2NC0xNi0xNi0xNnMtMTYgNy4xNjQtMTYgMTZ2MjA4YzAgOC44MzYgNy4xNjMgMTYgMTYgMTZ6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIj48L3BhdGg+PHBhdGggZD0ibTE3NiA0NDhjOC44MzYgMCAxNi03LjE2NCAxNi0xNnYtMjA4YzAtOC44MzYtNy4xNjQtMTYtMTYtMTZzLTE2IDcuMTY0LTE2IDE2djIwOGMwIDguODM2IDcuMTYzIDE2IDE2IDE2eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+" /></a></div>
+                           <div><a href="#"><span>4</span></a></div>
+                        </div> 
+                    </div>   
+                    <!-- <div id="modal_wrap"></div>
+                    <div id="modal"></div>
+                    <span id="close"></span> -->
                 </li>
-           
+                
                 <li>
-                hello
+                    hello
                 </li>
                 <li>
-                hello
+                    hello
                 </li>
             </ul>
         </div> 
