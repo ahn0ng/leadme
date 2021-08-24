@@ -49,6 +49,10 @@ const remove = (obj) => {
     document.getElementById('place').removeChild(obj.parentNode);
 }
 
+
+
+
+
 // 모달
 
 $(function(){
@@ -63,14 +67,6 @@ $(function(){
 });
 
 
-// test
-// $(function() {
-//     $("button").click( function() {
-//         var li = $('<span></span>').html($('input').val());
-//         $("#id_list").append(li);	
-
-//     });
-// });
 
 
 $(function(){
@@ -101,4 +97,28 @@ function clickButton() {
 // }
 
 
+});
+
+//test
+
+$(function(){
+
+    var button = document.getElementById('button');
+    var input = document.getElementById('input');
+    var list = document.getElementById('id_list2');
+    
+    var cnt = 1;
+    
+    button.addEventListener('click', clickButton);
+    
+    function clickButton() {
+      var temp = document.createElement('span');
+      temp.setAttribute("class", "list-group-item");
+      temp.setAttribute("id", "span"+cnt);
+      temp.innerHTML = input.value;
+    //   temp.innerHTML += "<button style='float: right;' class='btn btn-outline-secondary' type='button' onclick='remove("+cnt+")'>-</button>";
+      list.appendChild(temp);
+      
+      cnt++;
+    }
 });
