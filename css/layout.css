@@ -318,18 +318,29 @@ section{width: 100%;
     margin: 0 auto;
     height: 100vh;
     }
-.side_wrapt{width:300px;
-    overflow: auto;
-    margin: 0 auto;
-    height: 100%;
-    }
 
 #under_test{width:100%;
-        height: 70px;
-        background-color: #fff;
+        height: 50px;
+        background-color:#5b5b5b;
         position: fixed;
-        bottom: 0;}
+        bottom: 0;
+        display: flex;}
 
+#under_test div{width: 200px;
+    text-align: center;
+    border-left: 1px solid #fff;
+    line-height: 50px;
+    }
+
+#under_test div:nth-child(1){border-left: none;}
+#under_test div span{width:200px;
+                    height: 50px;
+                    font-size: 30px;
+                    display: block;
+                    color: #fff;
+                    }
+
+#under_test div img{width: 25px;}
 
 #modal_wrap{width: 100%;
             height: 100vh;
@@ -352,5 +363,31 @@ section{width: 100%;
             position: relative;}
 
 #modal span{line-height: 400px;
-
             }
+
+
+
+/* id_management */
+#account_list2{width: 100%;
+            height: 1200px;
+            /* background-color: #fff; */
+            margin-top: 50px;
+            text-align: center;
+            }
+
+#id_list{margin-top: 30px;
+        height: 600px;}
+#id_list span{display: block;
+            background-color: #fff;
+            height: 20px;
+            line-height: 20px;
+            border-radius: 100px;
+            margin-top: 15px;}
+
+#input{margin-top: 30px;}
+
+
+
+/* test */
+
+/* #id_list{background-color: #2d2d2d;} */
