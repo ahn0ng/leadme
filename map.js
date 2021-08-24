@@ -42,7 +42,7 @@ $("#imp_f").mouseleave(function(){
 const add_textbox = () => {
     const adding = document.getElementById("place");
     const newP = document.createElement('p');
-    newP.innerHTML = '<input type="search" class="place2"><span id="delete" onclick="remove(this)">-</p>';
+    newP.innerHTML = '<input type="search" class="place2"><span id="delete" onclick="remove(this)">-</span><input type="tel" class="number" value="핸드폰 번호" ><input type="text" class="memo" value="메모">';
     adding.appendChild(newP);
 }
 const remove = (obj) => {
