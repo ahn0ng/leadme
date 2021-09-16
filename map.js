@@ -5,21 +5,25 @@ $(function(){
 
     $side_menu.eq(0).click(function(){
     $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
+    $("#menu_box").stop().animate({"right":"-370"},500,"linear")
     $("#side_con").find($con.eq(0)).stop().animate({"margin-left":"0"},500,"linear");
     });
 
     $side_menu.eq(1).click(function(){
     $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
+    $("#menu_box").stop().animate({"right":"-370"},500,"linear")
     $("#side_con").find($con.eq(1)).stop().animate({"margin-left":"0"},500,"linear");
     });
 
     $side_menu.eq(2).click(function(){
     $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
+    $("#menu_box").stop().animate({"right":"-370"},500,"linear")
     $("#side_con").find($con.eq(2)).stop().animate({"margin-left":"0"},500,"linear");
     });
 
     $side_menu.eq(3).click(function(){
     $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
+    $("#menu_box").stop().animate({"right":"-370"},500,"linear")
     $("#side_con").find($con.eq(3)).stop().animate({"margin-left":"0"},500,"linear");
     });
 
@@ -169,15 +173,34 @@ $(document).ready(function(){ var fileTarget = $('.filebox .upload-hidden'); fil
 $(function(){
     var a = 0;
     var b = 0;
+    var $con = $("#side_con > ul > li");
     
     $("#menu_btn").click(function(){
     a++;
     b=a%2;
 
     if(b==1){
+        $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
         $("#menu_box").stop().animate({"right":"70"},500,"linear");
     }else{
-        $("#menu_box").stop().animate({"right":"-370"},500,"linear");
+        $("#menu_box").stop().animate({"right":"-400"},500,"linear");
+    }
+
+    });
+});
+
+$(function(){
+    var a = 0;
+    var b = 0;
+    
+    $("#menu_btn2").click(function(){
+    a++;
+    b=a%2;
+
+    if(b==1){
+        $("#menu_box2").stop().animate({"right":"0"},500,"linear");
+    }else{
+        $("#menu_box2").stop().animate({"right":"-400"},500,"linear");
     }
 
     });

@@ -62,7 +62,7 @@ nav li span{line-height: 50px;}
 #menu_box{width: 400px;
     height: 100vh;
     position: absolute;
-    right: -370px;
+    right: -400px;
     background-color: #efefef;}
 
 #box_wrap{width: 340px;
