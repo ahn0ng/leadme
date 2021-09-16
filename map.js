@@ -4,24 +4,28 @@ $(function(){
     var $con = $("#side_con > ul > li");
 
     $side_menu.eq(0).click(function(){
-        $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
+    $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
     $("#side_con").find($con.eq(0)).stop().animate({"margin-left":"0"},500,"linear");
     });
 
-$side_menu.eq(1).click(function(){
+    $side_menu.eq(1).click(function(){
     $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
     $("#side_con").find($con.eq(1)).stop().animate({"margin-left":"0"},500,"linear");
     });
 
-$side_menu.eq(2).click(function(){
+    $side_menu.eq(2).click(function(){
     $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
     $("#side_con").find($con.eq(2)).stop().animate({"margin-left":"0"},500,"linear");
     });
 
-$side_menu.eq(3).click(function(){
+    $side_menu.eq(3).click(function(){
     $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
     $("#side_con").find($con.eq(3)).stop().animate({"margin-left":"0"},500,"linear");
     });
+
+    $(".menu_close").click(function(){
+        $con.stop().animate({"margin-left":"400"},500,"linear");
+        });
 });
 
 $(function(){
@@ -42,7 +46,7 @@ $("#imp_f").mouseleave(function(){
 const add_textbox = () => {
     const adding = document.getElementById("place");
     const newP = document.createElement('p');
-    newP.innerHTML = '<input type="search" class="place2"><span id="delete" onclick="remove(this)">-</span><input type="tel" class="number" value="핸드폰 번호" ><input type="text" class="memo" value="메모">';
+    newP.innerHTML = '<div id="box_place"><input type="search" class="place2"><span id="delete" onclick="remove(this)">-</span><input type="tel" class="number" value="핸드폰 번호" ><input type="text" class="memo" value="메모"></div>';
     adding.appendChild(newP);
 }
 const remove = (obj) => {
@@ -57,11 +61,38 @@ const remove = (obj) => {
 
 $(function(){
     $("#drag").click(function(){
-        $("#modal_wrap").fadeIn();
+        $("#dd").fadeIn();
     });
 
-    $("#modal_wrap").click(function(){
-        $("#modal_wrap").fadeOut();
+    $("#dd").click(function(){
+        $("#dd").fadeOut();
+
+    });
+
+    $("#down").click(function(){
+        $("#dw").fadeIn();
+    });
+
+    $("#dw").click(function(){
+        $("#dw").fadeOut();
+
+    });
+
+    $("#open").click(function(){
+        $("#op").fadeIn();
+    });
+
+    $("#op").click(function(){
+        $("#op").fadeOut();
+
+    });
+
+    $("#reset").click(function(){
+        $("#rs").fadeIn();
+    });
+
+    $("#rs").click(function(){
+        $("#rs").fadeOut();
 
     });
 });
@@ -121,4 +152,33 @@ $(function(){
       
       cnt++;
     }
+});
+
+
+
+//test
+
+$(document).ready(function(){ var fileTarget = $('.filebox .upload-hidden'); fileTarget.on('change', function(){ 
+    if(window.FileReader){ 
+    
+    var filename = $(this)[0].files[0].name; } else { 
+    var filename = $(this).val().split('/').pop().split('\\').pop();} 
+    $(this).siblings('.upload-name').val(filename); }); 
+});
+
+$(function(){
+    var a = 0;
+    var b = 0;
+    
+    $("#menu_btn").click(function(){
+    a++;
+    b=a%2;
+
+    if(b==1){
+        $("#menu_box").stop().animate({"right":"70"},500,"linear");
+    }else{
+        $("#menu_box").stop().animate({"right":"-370"},500,"linear");
+    }
+
+    });
 });

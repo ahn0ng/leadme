@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
     <title>Lead Me</title>
 
     <script src="jquery-3.6.0.js" type="text/javascript" text="javascript"></script>
     <script src="map.js" type="text/javascript" text="javascript"></script>
-    
+   
    
 
 
@@ -27,9 +27,24 @@
             <nav>
                 <ul class="clearfix">
                     <li><a href="#"><h2>로그인</h2></a></li>
-                    <li><a href="#"><span><img src="img/icon/menu.png" alt="menu" /></span></a></li>
+                    <li><a href="#"><span id="menu_btn"><img src="img/icon/menu.png" alt="menu" /></span></a></li>
                 </ul>
             </nav>
+        </div>
+        <div id="menu_box">
+            <div id="box_wrap">
+                
+                <div>
+                    <a href="#"><h5>Lead Me</h5></a>
+                    <a href="#"><h5>Lead Me</h5></a>
+                    <a href="#"><h5>Lead Me</h5></a>
+                    <a href="#"><h5>Lead Me</h5></a>
+                    <a href="#"><h5>Lead Me</h5></a>
+                </div>
+                <div id="copy">
+                    <span>Copyright Lead Me</span>
+                </div>
+            </div>
         </div>
         
         <!-- header -->
@@ -60,6 +75,7 @@
                     <div id="aside_wrap">
                         <div class="side_wrap">
                             <div class="title"><h2>계정 관리</h2></div>
+                            <div class="menu_close"><span>X</span></div>
                             <div id="account_list2">
                                <h3>계정 목록</h3>
                                 <div class="input-group mb-3">
@@ -85,7 +101,7 @@
                     <div id="aside_wrap">
                         <div class="side_wrap">
                             <div class="title"><h2>경로 설정</h2></div>
-
+                            <div class="menu_close"><span>X</span></div>
                             <div id="account_list"><span>abcd@abcd.com</span></div>
 
                             <div id="start">
@@ -125,11 +141,11 @@
                         </div>  
 
                         <div id="under_bar">
-                           <div><a href="#"><img title="다운로드" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaWQ9IlNvbGlkIj48cGF0aCBkPSJtMjM5LjAyOSAzODQuOTdhMjQgMjQgMCAwIDAgMzMuOTQyIDBsOTAuNTA5LTkwLjUwOWEyNCAyNCAwIDAgMCAwLTMzLjk0MSAyNCAyNCAwIDAgMCAtMzMuOTQxIDBsLTQ5LjUzOSA0OS41Mzl2LTI2Mi4wNTlhMjQgMjQgMCAwIDAgLTQ4IDB2MjYyLjA1OWwtNDkuNTM5LTQ5LjUzOWEyNCAyNCAwIDAgMCAtMzMuOTQxIDAgMjQgMjQgMCAwIDAgMCAzMy45NDF6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+PHBhdGggZD0ibTQ2NCAyMzJhMjQgMjQgMCAwIDAgLTI0IDI0djE4NGgtMzY4di0xODRhMjQgMjQgMCAwIDAgLTQ4IDB2MTkyYTQwIDQwIDAgMCAwIDQwIDQwaDM4NGE0MCA0MCAwIDAgMCA0MC00MHYtMTkyYTI0IDI0IDAgMCAwIC0yNC0yNHoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg==" /></a></div>
-                           <div><a href="#"><img title="불러오기" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaWQ9IlNvbGlkIj48cGF0aCBkPSJtMTgyLjQ2MSAxNTUuNDggNDkuNTM5LTQ5LjUzOXYyNjIuMDU5YTI0IDI0IDAgMCAwIDQ4IDB2LTI2Mi4wNTlsNDkuNTM5IDQ5LjUzOWEyNCAyNCAwIDEgMCAzMy45NDEtMzMuOTQxbC05MC41MDktOTAuNTFhMjQgMjQgMCAwIDAgLTMzLjk0MiAwbC05MC41MDkgOTAuNTFhMjQgMjQgMCAxIDAgMzMuOTQxIDMzLjk0MXoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48cGF0aCBkPSJtNDY0IDIzMmEyNCAyNCAwIDAgMCAtMjQgMjR2MTg0aC0zNjh2LTE4NGEyNCAyNCAwIDAgMCAtNDggMHYxOTJhNDAgNDAgMCAwIDAgNDAgNDBoMzg0YTQwIDQwIDAgMCAwIDQwLTQwdi0xOTJhMjQgMjQgMCAwIDAgLTI0LTI0eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+" /></a>
+                           <div id="down"><a href="#"><img title="다운로드" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaWQ9IlNvbGlkIj48cGF0aCBkPSJtMjM5LjAyOSAzODQuOTdhMjQgMjQgMCAwIDAgMzMuOTQyIDBsOTAuNTA5LTkwLjUwOWEyNCAyNCAwIDAgMCAwLTMzLjk0MSAyNCAyNCAwIDAgMCAtMzMuOTQxIDBsLTQ5LjUzOSA0OS41Mzl2LTI2Mi4wNTlhMjQgMjQgMCAwIDAgLTQ4IDB2MjYyLjA1OWwtNDkuNTM5LTQ5LjUzOWEyNCAyNCAwIDAgMCAtMzMuOTQxIDAgMjQgMjQgMCAwIDAgMCAzMy45NDF6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+PHBhdGggZD0ibTQ2NCAyMzJhMjQgMjQgMCAwIDAgLTI0IDI0djE4NGgtMzY4di0xODRhMjQgMjQgMCAwIDAgLTQ4IDB2MTkyYTQwIDQwIDAgMCAwIDQwIDQwaDM4NGE0MCA0MCAwIDAgMCA0MC00MHYtMTkyYTI0IDI0IDAgMCAwIC0yNC0yNHoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg==" /></a></div>
+                           <div id="open"><a href="#"><img title="불러오기" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaWQ9IlNvbGlkIj48cGF0aCBkPSJtMTgyLjQ2MSAxNTUuNDggNDkuNTM5LTQ5LjUzOXYyNjIuMDU5YTI0IDI0IDAgMCAwIDQ4IDB2LTI2Mi4wNTlsNDkuNTM5IDQ5LjUzOWEyNCAyNCAwIDEgMCAzMy45NDEtMzMuOTQxbC05MC41MDktOTAuNTFhMjQgMjQgMCAwIDAgLTMzLjk0MiAwbC05MC41MDkgOTAuNTFhMjQgMjQgMCAxIDAgMzMuOTQxIDMzLjk0MXoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48cGF0aCBkPSJtNDY0IDIzMmEyNCAyNCAwIDAgMCAtMjQgMjR2MTg0aC0zNjh2LTE4NGEyNCAyNCAwIDAgMCAtNDggMHYxOTJhNDAgNDAgMCAwIDAgNDAgNDBoMzg0YTQwIDQwIDAgMCAwIDQwLTQwdi0xOTJhMjQgMjQgMCAwIDAgLTI0LTI0eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+" /></a>
                             </div>
                            <div id="drag"><a href="#"><img title="엑셀 불러오기" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPHBhdGggZD0iTTI4Mi4yMDgsMTkuNjdjLTMuNjQ4LTMuMDA4LTguNDgtNC4yNTYtMTMuMTUyLTMuMzkybC0yNTYsNDhDNS40NzIsNjUuNjg2LDAsNzIuMjc4LDAsNzkuOTl2MzUyICAgIGMwLDcuNjgsNS40NzIsMTQuMzA0LDEzLjA1NiwxNS43MTJsMjU2LDQ4YzAuOTYsMC4xOTIsMS45ODQsMC4yODgsMi45NDQsMC4yODhjMy42OCwwLDcuMzI4LTEuMjgsMTAuMjA4LTMuNjggICAgYzMuNjgtMy4wNCw1Ljc5Mi03LjU4NCw1Ljc5Mi0xMi4zMnYtNDQ4QzI4OCwyNy4yMjIsMjg1Ljg4OCwyMi43MSwyODIuMjA4LDE5LjY3eiBNMjU2LDQ2MC42OTRMMzIsNDE4LjcxVjkzLjI3bDIyNC00MS45ODQgICAgVjQ2MC42OTR6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+Cgk8L2c+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCTxnPgoJCTxwYXRoIGQ9Ik00OTYsNzkuOTlIMjcyYy04LjgzMiwwLTE2LDcuMTY4LTE2LDE2YzAsOC44MzIsNy4xNjgsMTYsMTYsMTZoMjA4djI4OEgyNzJjLTguODMyLDAtMTYsNy4xNjgtMTYsMTYgICAgYzAsOC44MzIsNy4xNjgsMTYsMTYsMTZoMjI0YzguODMyLDAsMTYtNy4xNjgsMTYtMTZ2LTMyMEM1MTIsODcuMTU4LDUwNC44MzIsNzkuOTksNDk2LDc5Ljk5eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNMzM2LDE0My45OWgtNjRjLTguODMyLDAtMTYsNy4xNjgtMTYsMTZjMCw4LjgzMiw3LjE2OCwxNiwxNiwxNmg2NGM4LjgzMiwwLDE2LTcuMTY4LDE2LTE2ICAgIEMzNTIsMTUxLjE1OCwzNDQuODMyLDE0My45OSwzMzYsMTQzLjk5eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNMzM2LDIwNy45OWgtNjRjLTguODMyLDAtMTYsNy4xNjgtMTYsMTZjMCw4LjgzMiw3LjE2OCwxNiwxNiwxNmg2NGM4LjgzMiwwLDE2LTcuMTY4LDE2LTE2ICAgIEMzNTIsMjE1LjE1OCwzNDQuODMyLDIwNy45OSwzMzYsMjA3Ljk5eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNMzM2LDI3MS45OWgtNjRjLTguODMyLDAtMTYsNy4xNjgtMTYsMTZjMCw4LjgzMiw3LjE2OCwxNiwxNiwxNmg2NGM4LjgzMiwwLDE2LTcuMTY4LDE2LTE2ICAgIEMzNTIsMjc5LjE1OCwzNDQuODMyLDI3MS45OSwzMzYsMjcxLjk5eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNMzM2LDMzNS45OWgtNjRjLTguODMyLDAtMTYsNy4xNjgtMTYsMTZjMCw4LjgzMiw3LjE2OCwxNiwxNiwxNmg2NGM4LjgzMiwwLDE2LTcuMTY4LDE2LTE2ICAgIEMzNTIsMzQzLjE1OCwzNDQuODMyLDMzNS45OSwzMzYsMzM1Ljk5eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNNDMyLDE0My45OWgtMzJjLTguODMyLDAtMTYsNy4xNjgtMTYsMTZjMCw4LjgzMiw3LjE2OCwxNiwxNiwxNmgzMmM4LjgzMiwwLDE2LTcuMTY4LDE2LTE2ICAgIEM0NDgsMTUxLjE1OCw0NDAuODMyLDE0My45OSw0MzIsMTQzLjk5eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNNDMyLDIwNy45OWgtMzJjLTguODMyLDAtMTYsNy4xNjgtMTYsMTZjMCw4LjgzMiw3LjE2OCwxNiwxNiwxNmgzMmM4LjgzMiwwLDE2LTcuMTY4LDE2LTE2ICAgIEM0NDgsMjE1LjE1OCw0NDAuODMyLDIwNy45OSw0MzIsMjA3Ljk5eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNNDMyLDI3MS45OWgtMzJjLTguODMyLDAtMTYsNy4xNjgtMTYsMTZjMCw4LjgzMiw3LjE2OCwxNiwxNiwxNmgzMmM4LjgzMiwwLDE2LTcuMTY4LDE2LTE2ICAgIEM0NDgsMjc5LjE1OCw0NDAuODMyLDI3MS45OSw0MzIsMjcxLjk5eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNNDMyLDMzNS45OWgtMzJjLTguODMyLDAtMTYsNy4xNjgtMTYsMTZjMCw4LjgzMiw3LjE2OCwxNiwxNiwxNmgzMmM4LjgzMiwwLDE2LTcuMTY4LDE2LTE2ICAgIEM0NDgsMzQzLjE1OCw0NDAuODMyLDMzNS45OSw0MzIsMzM1Ljk5eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNMjIwLjA2NCwzMDkuNDYybC0xMTItMTI4Yy01Ljg4OC02LjY4OC0xNS45NjgtNy4zMjgtMjIuNTkyLTEuNTA0Yy02LjY1Niw1LjgyNC03LjMyOCwxNS45MzYtMS41MDQsMjIuNTZsMTEyLDEyOCAgICBjMy4xNjgsMy42MTYsNy41ODQsNS40NzIsMTIuMDMyLDUuNDcyYzMuNzQ0LDAsNy40ODgtMS4zMTIsMTAuNTYtMy45NjhDMjI1LjIxNiwzMjYuMTk4LDIyNS44ODgsMzE2LjExOCwyMjAuMDY0LDMwOS40NjJ6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+Cgk8L2c+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCTxnPgoJCTxwYXRoIGQ9Ik0yMTcuODI0LDE2My4zODJjLTYuOTc2LTUuNDcyLTE3LjAyNC00LjE2LTIyLjQ2NCwyLjc4NGwtMTEyLDE0NGMtNS40MDgsNi45NzYtNC4xNiwxNy4wNTYsMi44MTYsMjIuNDY0ICAgIGMyLjk0NCwyLjI3Miw2LjQsMy4zNiw5LjgyNCwzLjM2YzQuNzM2LDAsOS40NzItMi4xMTIsMTIuNjA4LTYuMTQ0bDExMi0xNDRDMjI2LjA0OCwxNzguODM4LDIyNC44LDE2OC43OSwyMTcuODI0LDE2My4zODJ6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+Cgk8L2c+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPC9nPjwvc3ZnPg==" /></div>
-                           <div><a href="#"><img title="경로 초기화" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTQyNCA2NGgtODh2LTE2YzAtMjYuNDY3LTIxLjUzMy00OC00OC00OGgtNjRjLTI2LjQ2NyAwLTQ4IDIxLjUzMy00OCA0OHYxNmgtODhjLTIyLjA1NiAwLTQwIDE3Ljk0NC00MCA0MHY1NmMwIDguODM2IDcuMTY0IDE2IDE2IDE2aDguNzQ0bDEzLjgyMyAyOTAuMjgzYzEuMjIxIDI1LjYzNiAyMi4yODEgNDUuNzE3IDQ3Ljk0NSA0NS43MTdoMjQyLjk3NmMyNS42NjUgMCA0Ni43MjUtMjAuMDgxIDQ3Ljk0NS00NS43MTdsMTMuODIzLTI5MC4yODNoOC43NDRjOC44MzYgMCAxNi03LjE2NCAxNi0xNnYtNTZjMC0yMi4wNTYtMTcuOTQ0LTQwLTQwLTQwem0tMjE2LTE2YzAtOC44MjIgNy4xNzgtMTYgMTYtMTZoNjRjOC44MjIgMCAxNiA3LjE3OCAxNiAxNnYxNmgtOTZ6bS0xMjggNTZjMC00LjQxMSAzLjU4OS04IDgtOGgzMzZjNC40MTEgMCA4IDMuNTg5IDggOHY0MGMtNC45MzEgMC0zMzEuNTY3IDAtMzUyIDB6bTMxMy40NjkgMzYwLjc2MWMtLjQwNyA4LjU0NS03LjQyNyAxNS4yMzktMTUuOTgxIDE1LjIzOWgtMjQyLjk3NmMtOC41NTUgMC0xNS41NzUtNi42OTQtMTUuOTgxLTE1LjIzOWwtMTMuNzUxLTI4OC43NjFoMzAyLjQ0eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiI+PC9wYXRoPjxwYXRoIGQ9Im0yNTYgNDQ4YzguODM2IDAgMTYtNy4xNjQgMTYtMTZ2LTIwOGMwLTguODM2LTcuMTY0LTE2LTE2LTE2cy0xNiA3LjE2NC0xNiAxNnYyMDhjMCA4LjgzNiA3LjE2MyAxNiAxNiAxNnoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiPjwvcGF0aD48cGF0aCBkPSJtMzM2IDQ0OGM4LjgzNiAwIDE2LTcuMTY0IDE2LTE2di0yMDhjMC04LjgzNi03LjE2NC0xNi0xNi0xNnMtMTYgNy4xNjQtMTYgMTZ2MjA4YzAgOC44MzYgNy4xNjMgMTYgMTYgMTZ6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIj48L3BhdGg+PHBhdGggZD0ibTE3NiA0NDhjOC44MzYgMCAxNi03LjE2NCAxNi0xNnYtMjA4YzAtOC44MzYtNy4xNjQtMTYtMTYtMTZzLTE2IDcuMTY0LTE2IDE2djIwOGMwIDguODM2IDcuMTYzIDE2IDE2IDE2eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+" /></a></div>
+                           <div id="reset"><a href="#"><img title="경로 초기화" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTQyNCA2NGgtODh2LTE2YzAtMjYuNDY3LTIxLjUzMy00OC00OC00OGgtNjRjLTI2LjQ2NyAwLTQ4IDIxLjUzMy00OCA0OHYxNmgtODhjLTIyLjA1NiAwLTQwIDE3Ljk0NC00MCA0MHY1NmMwIDguODM2IDcuMTY0IDE2IDE2IDE2aDguNzQ0bDEzLjgyMyAyOTAuMjgzYzEuMjIxIDI1LjYzNiAyMi4yODEgNDUuNzE3IDQ3Ljk0NSA0NS43MTdoMjQyLjk3NmMyNS42NjUgMCA0Ni43MjUtMjAuMDgxIDQ3Ljk0NS00NS43MTdsMTMuODIzLTI5MC4yODNoOC43NDRjOC44MzYgMCAxNi03LjE2NCAxNi0xNnYtNTZjMC0yMi4wNTYtMTcuOTQ0LTQwLTQwLTQwem0tMjE2LTE2YzAtOC44MjIgNy4xNzgtMTYgMTYtMTZoNjRjOC44MjIgMCAxNiA3LjE3OCAxNiAxNnYxNmgtOTZ6bS0xMjggNTZjMC00LjQxMSAzLjU4OS04IDgtOGgzMzZjNC40MTEgMCA4IDMuNTg5IDggOHY0MGMtNC45MzEgMC0zMzEuNTY3IDAtMzUyIDB6bTMxMy40NjkgMzYwLjc2MWMtLjQwNyA4LjU0NS03LjQyNyAxNS4yMzktMTUuOTgxIDE1LjIzOWgtMjQyLjk3NmMtOC41NTUgMC0xNS41NzUtNi42OTQtMTUuOTgxLTE1LjIzOWwtMTMuNzUxLTI4OC43NjFoMzAyLjQ0eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiI+PC9wYXRoPjxwYXRoIGQ9Im0yNTYgNDQ4YzguODM2IDAgMTYtNy4xNjQgMTYtMTZ2LTIwOGMwLTguODM2LTcuMTY0LTE2LTE2LTE2cy0xNiA3LjE2NC0xNiAxNnYyMDhjMCA4LjgzNiA3LjE2MyAxNiAxNiAxNnoiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiPjwvcGF0aD48cGF0aCBkPSJtMzM2IDQ0OGM4LjgzNiAwIDE2LTcuMTY0IDE2LTE2di0yMDhjMC04LjgzNi03LjE2NC0xNi0xNi0xNnMtMTYgNy4xNjQtMTYgMTZ2MjA4YzAgOC44MzYgNy4xNjMgMTYgMTYgMTZ6IiBmaWxsPSIjZmZmZmZmIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIj48L3BhdGg+PHBhdGggZD0ibTE3NiA0NDhjOC44MzYgMCAxNi03LjE2NCAxNi0xNnYtMjA4YzAtOC44MzYtNy4xNjQtMTYtMTYtMTZzLTE2IDcuMTY0LTE2IDE2djIwOGMwIDguODM2IDcuMTYzIDE2IDE2IDE2eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+" /></a></div>
                         </div> 
 
                     </div>
@@ -140,7 +156,7 @@
                     <div id="aside_wrap">
                         <div class="side_wrap">
                             <div class="title"><h2>경로 비교</h2></div>
-                       
+                            <div class="menu_close"><span>X</span></div>
                             <div id="account_list2">
                                 
                                  <div id="id_list2" class="list-group"></div>
@@ -159,6 +175,7 @@
                     <div id="aside_wrap">
                         <div class="side_wrap">
                             <div class="title"><h2>설정</h2></div>
+                            <div class="menu_close"><span>X</span></div>
                         </div>
         
                     </div>
@@ -174,11 +191,36 @@
         </div>
 
 
-        <div id="modal_wrap">
+        <div id="dd" class="modal_wrap">
             <span>X</span>
             <div id="modal">
                 <span>DRAG & DROP</span>
-                <input type="file">
+                <!-- <input type="file" id="file"> -->
+                <div class="filebox"> <input class="upload-name" value="파일명" disabled="disabled"> <label for="ex_filename">파일선택</label> <input type="file" id="ex_filename" class="upload-hidden"> </div>
+            </div>
+            
+        </div>
+
+        <div id="dw" class="modal_wrap">
+            <span>X</span>
+            <div id="modal">
+               
+            </div>
+            
+        </div>
+
+        <div id="op" class="modal_wrap">
+            <span>X</span>
+            <div id="modal">
+               
+            </div>
+            
+        </div>
+
+        <div id="rs" class="modal_wrap">
+            <span>X</span>
+            <div id="modal">
+              
             </div>
             
         </div>
