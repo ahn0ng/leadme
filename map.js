@@ -2,34 +2,86 @@ $(function(){
 
     var $side_menu =$("#side_btn li");
     var $con = $("#side_con > ul > li");
-
+    var a = 0;
+    var b = 0;
+    var c = 0;
+    var d = 0;
+    var e = 0;
+    var f = 0;
+    var g = 0;
+    var h = 0;
+    
     $side_menu.eq(0).click(function(){
-    $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
-    $("#menu_box").stop().animate({"right":"-370"},500,"linear")
-    $("#side_con").find($con.eq(0)).stop().animate({"margin-left":"0"},500,"linear");
+    a++;
+    b=a%2;
+    c=0;
+    e=0;
+    g=0;
+    if(b==1){
+            $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
+            $("#menu_box").stop().animate({"right":"-370"},500,"linear")
+            $("#side_con").find($con.eq(0)).stop().animate({"margin-left":"0"},500,"linear");
+    
+    }else{
+        $con.stop().animate({"margin-left":"400"},500,"linear");
+           
+    }
+
     });
 
     $side_menu.eq(1).click(function(){
-    $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
-    $("#menu_box").stop().animate({"right":"-370"},500,"linear")
-    $("#side_con").find($con.eq(1)).stop().animate({"margin-left":"0"},500,"linear");
-    });
+        c++;
+        d=c%2;
+        a=0;
+        e=0;
+        g=0;
+        if(d==1){
+            $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
+            $("#menu_box").stop().animate({"right":"-370"},500,"linear")
+            $("#side_con").find($con.eq(1)).stop().animate({"margin-left":"0"},500,"linear");
+
+        }else{
+            $con.stop().animate({"margin-left":"400"},500,"linear");
+        }
+    
+        });
 
     $side_menu.eq(2).click(function(){
-    $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
-    $("#menu_box").stop().animate({"right":"-370"},500,"linear")
-    $("#side_con").find($con.eq(2)).stop().animate({"margin-left":"0"},500,"linear");
-    });
-
-    $side_menu.eq(3).click(function(){
-    $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
-    $("#menu_box").stop().animate({"right":"-370"},500,"linear")
-    $("#side_con").find($con.eq(3)).stop().animate({"margin-left":"0"},500,"linear");
-    });
-
-    $(".menu_close").click(function(){
-        $con.stop().animate({"margin-left":"400"},500,"linear");
+        e++;
+        f=e%2;
+        a=0;
+        g=0;
+        c=0;
+    
+        if(f==1){
+            $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
+            $("#menu_box").stop().animate({"right":"-370"},500,"linear")
+            $("#side_con").find($con.eq(2)).stop().animate({"margin-left":"0"},500,"linear");
+         
+        }else{
+            $con.stop().animate({"margin-left":"400"},500,"linear");
+        }
+    
         });
+        
+    $side_menu.eq(3).click(function(){
+        g++;
+        h=g%2;
+        a=0;
+        e=0;
+        c=0;
+        
+        if(h==1){
+            $("#side_con").find($con).stop().animate({"margin-left":"400"},1,"linear")
+            $("#menu_box").stop().animate({"right":"-370"},500,"linear")
+            $("#side_con").find($con.eq(3)).stop().animate({"margin-left":"0"},500,"linear");
+
+        }else{
+            $con.stop().animate({"margin-left":"400"},500,"linear");
+            }
+        
+    });
+
 });
 
 $(function(){
@@ -50,9 +102,9 @@ $("#imp_f").mouseleave(function(){
 const add_textbox = () => {
     const adding = document.getElementById("place");
     const newP = document.createElement('p');
-    newP.innerHTML = '<div id="box_place"><input type="search" class="place2"><span id="delete" onclick="remove(this)">-</span><input type="tel" class="number" value="핸드폰 번호" ><input type="text" class="memo" value="메모"></div>';
+    newP.innerHTML = '<div id="box_place"><input type="search" class="place2"><span class="more">···</span><span class="m_menu"><span>시간 설정</span><span>즐겨찾기</span><span>삭제</span></span><input type="tel" class="number" value="핸드폰 번호" ><input type="text" class="memo" value="메모"></div>';
     adding.appendChild(newP);
-}
+} // onclick="remove(this)"
 const remove = (obj) => {
     document.getElementById('place').removeChild(obj.parentNode);
 }
@@ -68,7 +120,7 @@ $(function(){
         $("#dd").fadeIn();
     });
 
-    $("#dd").click(function(){
+    $(".close").click(function(){
         $("#dd").fadeOut();
 
     });
@@ -77,7 +129,7 @@ $(function(){
         $("#dw").fadeIn();
     });
 
-    $("#dw").click(function(){
+    $(".close").click(function(){
         $("#dw").fadeOut();
 
     });
@@ -86,7 +138,7 @@ $(function(){
         $("#op").fadeIn();
     });
 
-    $("#op").click(function(){
+    $(".close").click(function(){
         $("#op").fadeOut();
 
     });
@@ -95,7 +147,7 @@ $(function(){
         $("#rs").fadeIn();
     });
 
-    $("#rs").click(function(){
+    $(".close").click(function(){
         $("#rs").fadeOut();
 
     });
@@ -204,4 +256,17 @@ $(function(){
     }
 
     });
+});
+
+
+$(function(){
+    $(".more").click(function(){
+        $(".m_menu").css({"opacity":"1"})
+    });
+
+   
+    $(".m_menu").mouseleave(function(){
+        $(".m_menu").css({"opacity":"0"})
+    });
+    
 });
